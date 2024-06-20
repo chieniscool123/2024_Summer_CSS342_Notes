@@ -37,3 +37,7 @@ int main(int argc, char **argv) {
 
 ### Something to read after lecture
 Question on MakeFile on first quiz 
+
+### Reminders
+- Quiz ( Due next Wednesday )
+- Homeworks about going through the submission process ( Due next Sunday )
