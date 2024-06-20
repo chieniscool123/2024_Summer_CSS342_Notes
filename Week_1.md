@@ -33,6 +33,13 @@ int main(int argc, char **argv) {
 
 #### Dynamic Allocation
 
+#### FACB
+
+1. Fork
+2. Action
+3. Clone
+4. Branch
+
 
 
 ### Something to read after lecture
