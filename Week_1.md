@@ -22,8 +22,16 @@ int main(int argc, char **argv) {
 ### Things I learned 
 
 #### VIM commands
+Edit file: vi file_name
+Quit : ESC -> :q
+Type mode: i (Insert)
+Command mode: ESC from the type mode
+Save: ESC -> :w
 
 #### GIT commands
+git diff
+git commit -am "your message here"
+git push (make sure to create a token for ur password)
 
 #### GITHUB
 
