@@ -83,13 +83,13 @@ $(EXE): hello_world.o sorter.o  // To create the executable file, we need these 
 clean:
         rm $(EXE) *.o
 
-# To compile:
+To compile:
 make or make -j 4
 
-# To run:
+To run:
 ./my_executable
 
-# to clean up
+to clean up
 make clean
 
 #### CMAKE
@@ -124,8 +124,8 @@ make
 #### FACB
 
 1. Fork
-2. Action
-3. Clone
+2. Action ( Action Tab on GitHub to activate WorkFlow) 
+3. Clone ( Clone it to your local machine via CLion) 
 4. Branch
 
 
@@ -136,3 +136,13 @@ Question on MakeFile on first quiz
 ### Reminders
 - Quiz ( Due next Wednesday )
 - Homeworks about going through the submission process ( Due next Sunday )
+
+### Quiz
+1. Forked
+2. Create work branch
+3. Check to do tab at the bottom on CLion for lists to do
+4. Submit the link to your github once done
+
+### Homework
+1. Question 4 : Can turn in after deadline
+2. Question 3 : Write your own test
