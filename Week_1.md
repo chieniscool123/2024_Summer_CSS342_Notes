@@ -107,15 +107,15 @@ add_executable(${PROJECT_NAME} hello_world.cpp sorter.cpp)
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 
 bash
-# to create make file
+ to create make file
 mkdir build
 cd build/
 cmake ..
 
-# to compile using makefile
+to compile using makefile
 make
 
-# to run
+to run
 ./my_executable
 
 
