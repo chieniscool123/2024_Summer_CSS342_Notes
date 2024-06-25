@@ -25,3 +25,9 @@
 ### Post Morten Skills
 #### Root Cause Analysis (RCA)
 #### 5 Why's
+
+### Contact Informations
+#### Rochelly Serrano 
+#### rochelly@yourpathfindercoach.com
+#### 713-614-5907
+
