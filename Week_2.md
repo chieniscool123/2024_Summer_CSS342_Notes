@@ -11,4 +11,7 @@ git log : how many commits you did
 ##### Red = no find 
 
 ### Questions
-What is the diff between the swap with pointer and reference as parameter. 
+What is the diff between the swap with pointer and reference as parameter. \
+
+Textbook reading 
+Submission process
