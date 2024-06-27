@@ -25,6 +25,11 @@ refrence
 What is the diff between the swap with pointer and reference as parameter. 
 
 ### To do 
-####Learn more about pointer and reference 
-####Textbook reading 
-####Submission process
+
+Learn more about pointer and reference 
+
+Textbook reading 
+
+Submission process
+
+Re do the OOP we did in class
