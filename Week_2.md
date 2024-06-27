@@ -4,6 +4,17 @@ git branch : which branch you are on
 git diff : red is what you removed, green is what you added 
 git log : how many commits you did 
 
+### Linux 
+tmux 
+valgrind exe_name
+
+### C++
+pass by value 
+pass by reference
+
+pointers
+refrence 
+
 ### Clion
 #### Color 
 ##### Blue = changes. Click on the left side to see what changes you made 
@@ -13,5 +24,7 @@ git log : how many commits you did
 ### Questions
 What is the diff between the swap with pointer and reference as parameter. \
 
+### To do 
+Learn more about pointer and reference 
 Textbook reading 
 Submission process
