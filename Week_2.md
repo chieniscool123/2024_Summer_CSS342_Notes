@@ -15,6 +15,12 @@ pass by reference
 pointers
 refrence 
 
+if you do 
+Dog *Mike = new Dog ("Mike", 3, "Kale"); // it return an address so you must have a pointer 
+delete Mike;
+
+virtual 
+pointer can only point to a certain type 
 ### Clion
 #### Color 
 ##### Blue = changes. Click on the left side to see what changes you made 
