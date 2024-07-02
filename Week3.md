@@ -26,13 +26,21 @@ unlimit -s : show you how much memory is in your stack
 #### C++
 #define PrintX to replace 
 
-
 Foo is not the pointer
 Cat is a type 
 Cat * is also a type 
 
+![image](https://github.com/chieniscool123/2024_Summer_CSS342_Notes/assets/100248105/c11d198f-bd44-4377-b188-85d762f27d9a)
+
 
 If you want to use it like this you should use the heap for it to be accessible outside of the scope 
+
+![image](https://github.com/chieniscool123/2024_Summer_CSS342_Notes/assets/100248105/bd0f707a-777f-424c-872a-9a0344ecf516)
+
+
+![image](https://github.com/chieniscool123/2024_Summer_CSS342_Notes/assets/100248105/6f9fd2e7-0b5d-4271-bd18-9dd07464e7df)
+
+![image](https://github.com/chieniscool123/2024_Summer_CSS342_Notes/assets/100248105/ce68e0e1-5cd5-4d7d-bd92-bc8c08ece035)
 
 
 
