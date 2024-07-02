@@ -27,4 +27,13 @@ unlimit -s : show you how much memory is in your stack
 #define PrintX to replace 
 
 
+Foo is not the pointer
+Cat is a type 
+Cat * is also a type 
+
+
+If you want to use it like this you should use the heap for it to be accessible outside of the scope 
+
+
+
 
