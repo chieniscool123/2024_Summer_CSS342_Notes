@@ -20,6 +20,8 @@ All your function in the same program share the same amount of memory of 8mb in 
 
 Recursion can run of the stack memory if it goes too long 
 
+Heap is slower because it has to manage 
+
 #### Linux 
 unlimit -s : show you how much memory is in your stack 
 
