@@ -21,6 +21,17 @@
 
 ### Example
 
+#### Pass in by reference
+![image](https://github.com/chieniscool123/2024_Summer_CSS342_Notes/assets/100248105/7abbe15f-3452-476d-8b81-495df4127217)
+
+#### Passing the Address of a Variable
+![image](https://github.com/chieniscool123/2024_Summer_CSS342_Notes/assets/100248105/75c2103f-1bc0-4365-bddc-1be9ad6c79ca)
+
+#### Passing a Pointer Variable Directly
+
+![image](https://github.com/chieniscool123/2024_Summer_CSS342_Notes/assets/100248105/3f499879-ec26-47bb-93fb-05084d59b3fe)
+
+
 
 #### Basic Pointer Operations
     int main() {
