@@ -133,6 +133,13 @@
 ### FUNCTION CALLS
 ![image](https://github.com/user-attachments/assets/b3db84af-a870-4b11-bf8f-4d8ce4c898be)
 
+#### Modifying the pointers
+![image](https://github.com/user-attachments/assets/5b69d1e8-3513-4e6a-85b7-fd2320b93561)
+
+#### Reference and Original having the same address 
+![image](https://github.com/user-attachments/assets/0f1a370d-e7d1-418b-930d-cde48b340e95)
+
+
 
 
 
