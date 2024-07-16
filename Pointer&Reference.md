@@ -125,6 +125,15 @@
     return 0;
 }
 
+#### POINTERS AND REFERENCE PARAMETER AND FUNCTION CALLS
+
+### PARAMETER
+![image](https://github.com/user-attachments/assets/ac95f0ab-a71f-4d39-9875-0d9dc3d99853)
+
+### FUNCTION CALLS
+![image](https://github.com/user-attachments/assets/b3db84af-a870-4b11-bf8f-4d8ce4c898be)
+
+
 
 
 
