@@ -137,15 +137,11 @@ Explain what the line with a comment does with example when
 - front_idx = 5, capacity = 6
 - front_idx = 4, capacity = 6
 
+```
  front_idx = (front_idx + 1) % capacity;  
  // This line basically move the position of the front_idx toward its next removal. 
  front_idx = 5, capacity = 6. front_idx + 1 = 6, 6%6 = 0. So the next removal index will be 0
  front_idx = 4, capacity = 6. front_idx + 1 = 5, 5%6 = 5. So the next removal index will be 5
-
- 
-
-```
-
 
 
 ```
