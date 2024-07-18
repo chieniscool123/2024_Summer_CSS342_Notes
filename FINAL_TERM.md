@@ -1,30 +1,3 @@
-## 2024 UWB CSS 342(A) Midterm Exam (100pt)
-
-**Date: 7/18/2024**
-
-**Time: 11:15 am to 1:30 pm PDT**
-
-**Submission: Put your answers in a document like Word, PDF, or plain text, and submit it on Canvas**
-
-**Late policy:** Any submission after 1:15 pm is considered late, and will NOT be accepted. Tip: add an alarm clock for 1:10 pm to remind yourself.
-
-**Rules:**
-
-- Open "book". Internet search also OK. Give reference to what you used from internet.
-- Not required to come to school or zoom.
-- Be very careful of potential bogus answer from ChatGPT. It's really meant to be used for learning, not for getting answers. 
-- No communication (talk, text messaging, discord private and public messaging) of any kind with other students taking this exam during the exam.
-- Ask question to instructor on discord in a **private** message. Public message will be ignored. 
-
-Any violation will strip you of all the points and will be reported to school for disciplinary action. No exception.
-
-**Tips:**
-
-- Control your time spent on each problem. If stuck, move along and come back again later. Finish the easier ones first.
-- Keep an eye on the Discord #midterm channel for updates.
-- It might help if IDE like Intellij is used to write code.
-- Read questions carefully. Is it asking for ***correct*** or ***incorrect***.
-- Extra credits are pretty much free points to help your exam grade, so take it.
 
 ### Single Choice Questions
 
@@ -272,21 +245,22 @@ should be
 #include <iostream>
 template<typename T>
 T Max(T a, T b) {
-   return a < b ? b : a;
+   return a < b ? b : a; // return the bigger value 
 }
 
 int main () {
    int i = 12;
    int j = 30;
-   std::cout << "Max(i, j): " << Max(i, j) << std::endl;
+   std::cout << "Max(i, j): " << Max(i, j) << std::endl; 
 
    float f1 = 2.5;
    float f2 = -20.7;
-   std::cout << "Max(f1, f2): " << Max(f1+f2, f1-f2) << std::endl;
-}
+   std::cout << "Max(f1, f2): " << Max(f1+f2, f1-f2) << std::endl; 
 ```
 ```
 
+Max(i, j): 30
+Max(f1, f2): 23.2
 
 
 ```
@@ -304,8 +278,16 @@ public:
     float distance() { return sqrt(x*x + y*y);}
 };
 ```
-```
 
+```
+template <typename T>
+class ComplexNumber {
+    T x;
+    T y;
+public:
+    ComplexNumber(T x, T y) : x(x), y(y) {}
+    T distance() { return sqrt(x*x + y*y);}
+};
 
 
 ```
@@ -348,9 +330,33 @@ Note that input list is not always sorted.
 
 (10pt) Implement the nth_to_last function. **5pt extra credit** if your code only travels through the linkedlist no more than one time.
 ```c++
+
+// Got some help from chatgpt with how the two use the ref_ptr to track how many nodes there are in the linkedlist
 int SingleLinkedList::nth_to_last(int n) {
 
+ if (n < 0) {
+        throw std::invalid_argument("n must be bigger than 0");
+    }
 
+    ListNode* main_ptr = head->next; 
+    ListNode* ref_ptr = head->next;  
+
+    int count = 0;
+    while (count < n) {
+        if (ref_ptr == nullptr) {
+            throw std::out_of_range("not enought nodes in the linkedlist");
+        }
+        ref_ptr = ref_ptr->next;
+        count++;
+    }
+
+    while (ref_ptr != nullptr && ref_ptr->next != nullptr) {
+        main_ptr = main_ptr->next;
+        ref_ptr = ref_ptr->next;
+    }
+
+    return main_ptr->val;
+}
 
 
 }
@@ -358,7 +364,19 @@ int SingleLinkedList::nth_to_last(int n) {
 
 (5pt) Discuss how you would handle edge cases, for example, when list has only 3 nodes but n is 8. 
 ```
-
+right here. So for example, you will have 3 nodes
+1st run : count = 0 < 8 so it will run 
+2nd run: count = 1 < 8 so it will run
+3rd run: count =2 < 8. it will run
+4th run. count = 3. ref_ptr = null ptr so it will not run
+   int count = 0;
+    while (count < n) {
+        if (ref_ptr == nullptr) {
+            throw std::out_of_range("n is greater than the number of nodes in the list.");
+        }
+        ref_ptr = ref_ptr->next;
+        count++;
+    }
 
 
 ```
@@ -366,14 +384,17 @@ int SingleLinkedList::nth_to_last(int n) {
 
 **11. (5pt) What's a unit test? If we ourselves write both function code and test, and the test we write will pass at last, what's the point of having any test?**
 ```
+To isolate a specific section of the code for testing. It is to make sure that each unit of the software is performance as exepected.
 
+Just because you write the function does not mean it will perform as expected from the test.
 
 
 ```
 
 **12. (5pt) Why is it not a good idea to use any kind of printing for software testing?**
 ```
-
+It is very complicated and time consume to write any kind of printing for software testing
+It is also very hard to read due to the clutter information in the terminal
 
 ```
 
@@ -421,6 +442,9 @@ duck Tim walked 110 steps
 
 Explain why its 110 steps instead of 10 steps printed.
 ```
+std::string msg = duck.walk(steps);
+the walk method is taking in the reference to steps and modify 'steps' directly.
+It is in this line right here  steps += 100;
 
 
 
@@ -437,6 +461,10 @@ std::cout << "Duck's name is " << duck_name << " after delete\n";
 ```
 And any problem (hint: memory related) with this code?
 ```
+I used chatgpt for this problem
+I learned something called a dangling reference
+So the duck object is deleted but the duck_name is still holding a reference to the memory location where the name was stored.
+
 
 
 ```
@@ -472,7 +500,47 @@ private:
 
 (8pt) Add to the Color class with a function that allows adding basic color (RED, GREEN, BLUE) together using "+"
 ```
+// Overloading operator + 
+ Color operator+(Color const &another_color) const {
+        switch (color) {
+            case RED:
+                switch (another_color.color) {
+                    case GREEN:
+                        return Color(YELLOW);
+                    case BLUE:
+                        return Color(MAGENTA);
+                    case RED:
+                        return Color(RED);
+                    default:
+                        return Color(UNKNOWN);
 
+                }
+            case GREEN:
+                switch (another_color.color) {
+                    case GREEN:
+                        return Color(GREEN);
+                    case BLUE:
+                        return Color(MAGENTA);
+                    case RED:
+                        return Color(YELLOW);
+                    default:
+                        return Color(UNKNOWN);
+                }
+            case BLUE:
+                switch (another_color.color) {
+                    // notice a different way to return object
+                    case GREEN:
+                        return {CYAN};
+                    case BLUE:
+                        return {BLUE};
+                    case RED:
+                        return {MAGENTA};
+                    default:
+                        return Color(UNKNOWN);
+                }
+        }
+        return Color(WHITE);
+    };
 
 
 
@@ -495,6 +563,18 @@ TEST(color, simple) {
 
 (7pt) Write down how you would test your function as thorough as possible. You can write code or text description or both for your test plan.
 ```
+    ASSERT_EQ(red, red + red);
+    ASSERT_EQ(magenta, red + blue);
+
+    ASSERT_EQ(cyan, green + blue);
+    ASSERT_EQ(yellow, green + red);
+    ASSERT_EQ(green, green + green);
+
+    ASSERT_EQ(blue, blue + blue);
+    ASSERT_EQ(cyan, blue + green);
+    ASSERT_EQ(magenta, blue + red);
+
+
 
 
 ```
@@ -502,7 +582,8 @@ TEST(color, simple) {
 **15. (5pt) Explain why this [descructor](https://github.com/a-teaching-goose/2024-summer-342-quiz-oop/blob/solution/Pets/pet.h#L35) needs to be "virtual". If it's not virtual, what would be the consequence?**
 
 ```
-
+If it not declared as virtual then when you call delete pet, only the destructor of the Pet class is called, not the destructor of the Dog class.
+To clean up properly and manage your resources. you need to declare your base class "pet" as virtual.
 
 
 ```
@@ -532,7 +613,8 @@ clean:
 ```
 
 ```
-
+To create the exe file you need hello_world.o and sorter.o 
+But you need the hello_world.cpp and sorter.cpp to create the .o file so you basically keep moving back until you got all the file needed to create the exe file 
 
 
 ```
@@ -540,6 +622,7 @@ clean:
 **(2pt) Extra Credit 2**
 In the lecture, the teacher proposed an idea that unit test can be treated as a *contract* between requirements and deliverables. Explain this idea especially why "bare minimum" was mentioned in that part of the lecture.
 ```
+You said you should never said my code should be correct. Only say my code passed all the tests which is the basic requirements. Passing the tests can be seen as an acctaple results. 
 
 
 ```
@@ -548,8 +631,8 @@ In the lecture, the teacher proposed an idea that unit test can be treated as a 
 In the lecture, the teacher explained why allowcating memory from heap is potentially slower than from stack. What was the reason for this performance difference mentioned in lecture?
 
 ```
-
-
+ The problem have to do with fragmentation and the need to find appropriate blocks of memory dynamically
+Let's use array as an example  The system must find a block of memory large enough to hold the array. The system might need to locate a suitable space, making it slower than stack allocation.
 
 ```
 
@@ -558,6 +641,23 @@ In the lecture, the teacher explained why allowcating memory from heap is potent
 What is the fix for [this bug](https://github.com/a-teaching-goose/2024-summer-342-quiz-oop/blob/main/Pets/dog.h#L18) and why?
 
 ```
+ it takes the owner parameter by non-const reference.
+
+   Dog(const std::string &name, int age, std::string &owner) : Pet(name, age) {
+        this->owner = owner;
+    };
+
+Where the constructor declared it as a const refer
+Dog::Dog(const std::string &name, int age, const std::string &owner,
+         Pet **friends, int num_of_friends) : Dog(name, age, owner) {
+    if (num_of_friends <= 0) {
+        return;
+    }
+
+So just add const infront of owner
+ Dog(const std::string &name, int age, const std::string &owner) : Pet(name, age) {
+    this->owner = owner;
+}
 
 
 ```
