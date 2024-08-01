@@ -1,0 +1,17 @@
+Book recommendation : The Mom Test (learn about what the customer want, what projects you should build)
+
+https://discordapp.com/channels/1247234956393185330/1252085279787847801/1268642698798043260
+
+linkedlist used to keep of least and most used. the last one in the least used one 
+
+you gonna be used the hashmap to find the book. if it is in the linkedlist then you go through the hashmap first to find the pointer 
+get() function will delete both the book from the hashmap and linkedlist
+
+
+Problem 2: 
+
+1. Use stack not recursion for the TO DO
+Question : 
+
+Problem 1 :
+- What is remove from cache 
