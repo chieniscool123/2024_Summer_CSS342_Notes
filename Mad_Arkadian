@@ -11,6 +11,8 @@ get() function will delete both the book from the hashmap and linkedlist
 Problem 2: 
 
 1. Use stack not recursion for the TO DO
+
+2. LDA is done with recursion
 Question : 
 
 Problem 1 :
