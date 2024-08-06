@@ -5,5 +5,7 @@
 #### complexity = cost
 #### worst case scenario 
 #### Usage of resouces:
-#####  -Memory allocation
-#####  -Number of comparisons
+#####  - Memory allocation
+#####  - Number of comparisons
+
+
