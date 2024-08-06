@@ -8,3 +8,5 @@ A  1   ACD  B
 CD 10  A    BCD
 B  2   AB   CD
 AB 2        ABCD
+
+Why is Bubble Sort N^2. Will it still be N^2 after you modify it ? 
