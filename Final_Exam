@@ -1,2 +1,10 @@
 Three types of binary search tree 7/30/2024 lesson
 Recursion Problem 7/30/2024 lesson
+
+Crossing the bridge prboelm 8/6/2024
+
+AB 2   CD   AB
+A  1   ACD  B
+CD 10  A    BCD
+B  2   AB   CD
+AB 2        ABCD
