@@ -14,3 +14,21 @@ Why is Bubble Sort N^2. Will it still be N^2 after you modify it ?
 Truth table lecture 7 8/9/2024
 
 Induction theory lecture 7
+
+Why do we declare destructor as virtual ? 
+
+Array
+Binary Tree
+Tree
+Linkedlist
+
+In order 
+Pre order 
+Post order 
+
+HashTable : used to randomly search stuffs 
+
+Big O notation 
+Just because something have the same big 0. Doesn't mean they gonna be running at the same speed 
+
+If there is more time complexity then space complexity means fewer computation
